@@ -55,7 +55,7 @@ resource azurerm_network_interface F5-Nic2 {
   depends_on                    = [var.vm_depends_on]
   location                      = "${var.location}"
   resource_group_name           = "${var.resourcegroup_name}"
-  enable_ip_forwarding          = true
+  enable_ip_forwarding          = false
   enable_accelerated_networking = false
   network_security_group_id     = "${azurerm_network_security_group.nsg.id}"
   dynamic "ip_configuration" {
@@ -75,7 +75,7 @@ resource azurerm_network_interface F5-Nic3 {
   depends_on                    = [var.vm_depends_on]
   location                      = "${var.location}"
   resource_group_name           = "${var.resourcegroup_name}"
-  enable_ip_forwarding          = true
+  enable_ip_forwarding          = false
   enable_accelerated_networking = false
   network_security_group_id     = "${azurerm_network_security_group.nsg.id}"
   dynamic "ip_configuration" {
@@ -95,7 +95,7 @@ resource azurerm_network_interface F5-Nic4 {
   depends_on                    = [var.vm_depends_on]
   location                      = "${var.location}"
   resource_group_name           = "${var.resourcegroup_name}"
-  enable_ip_forwarding          = true
+  enable_ip_forwarding          = false
   enable_accelerated_networking = false
   network_security_group_id     = "${azurerm_network_security_group.nsg.id}"
   dynamic "ip_configuration" {
@@ -160,7 +160,7 @@ resource azurerm_virtual_machine F5 {
     caching       = "ReadWrite"
     create_option = "FromImage"
     os_type       = "Linux"
-    disk_size_gb  = "30"
+    disk_size_gb  = "80"
   }
   tags = "${var.tags}"
 }
