@@ -139,7 +139,7 @@ resource azurerm_virtual_machine F5 {
     computer_name  = "${var.name}"
     admin_username = "${var.admin_username}"
     admin_password = "${data.azurerm_key_vault_secret.FWpasswordsecret.value}"
-    custom_data    = "${file("${var.custom_data}")}"
+    //custom_data    = "${file("${var.custom_data}")}"
   }
   storage_image_reference {
     publisher = "${var.storage_image_reference.publisher}"
