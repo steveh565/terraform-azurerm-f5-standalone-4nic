@@ -17,7 +17,6 @@ variable "secretPasswordName" {}
 variable "vnet_name" {}
 variable "resourcegroup_name" {}
 variable "vnet_resourcegroup_name" {}
-variable "custom_data" {}
 variable "subnet1_name" {}
 variable "subnet2_name" {}
 variable "subnet3_name" {}
